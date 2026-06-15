@@ -1,11 +1,10 @@
 {
     "name": "extcode/cart-pdf",
-    "type": "typo3-cms-extension",
     "description": "Shopping Cart(s) for TYPO3 - PDF Renderer for Invoices and Delivery Notes",
-    "homepage": "https://cart.extco.de",
     "license": [
         "GPL-2.0+"
     ],
+    "type": "typo3-cms-extension",
     "keywords": [
         "TYPO3 CMS",
         "Shopping Cart",
@@ -19,8 +18,22 @@
             "role": "Developer"
         }
     ],
+    "homepage": "https://cart.extco.de",
     "support": {
         "issues": "https://github.com/extcode/cart_pdf/issues"
+    },
+    "require": {
+        "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
+        "ext-fileinfo": "*",
+        "extcode/cart": "^11.5",
+        "tecnickcom/tcpdf": "^6.7",
+        "typo3/cms-core": "^13.4"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.59",
+        "helmich/typo3-typoscript-lint": "^3.2",
+        "phpstan/phpstan": "^1.10",
+        "typo3/testing-framework": "^9.3"
     },
     "autoload": {
         "psr-4": {
@@ -28,30 +41,17 @@
         }
     },
     "config": {
-	"bin-dir": ".build/bin",
-        "vendor-dir": ".build/vendor",	
         "allow-plugins": {
-            "typo3/cms-composer-installers": false,
-            "typo3/class-alias-loader": false
-        }
+            "typo3/class-alias-loader": false,
+            "typo3/cms-composer-installers": false
+        },
+        "bin-dir": ".build/bin",
+        "vendor-dir": ".build/vendor"
     },
     "extra": {
         "typo3/cms": {
             "extension-key": "cart_pdf",
             "web-dir": ".build/public"
-       }
-    },
-    "require": {
-        "php": "~8.2.0 || ~8.3.0 | ~8.4.0",
-        "ext-fileinfo": "*",
-        "typo3/cms-core": "^13.4",
-        "extcode/cart": "^11.5",
-        "tecnickcom/tcpdf": "^6.7"
-    },
-    "require-dev": {
-        "typo3/testing-framework": "^9.3",
-        "friendsofphp/php-cs-fixer": "^3.59",
-        "helmich/typo3-typoscript-lint": "^3.2",
-        "phpstan/phpstan": "^1.10"
+        }
     }
 }
