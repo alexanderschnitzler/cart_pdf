@@ -27,7 +27,7 @@
         "ext-fileinfo": "*",
         "extcode/cart": "^11.5",
         "tecnickcom/tcpdf": "^6.7",
-        "typo3/cms-core": "^13.4"
+        "typo3/cms-core": "~13.4.0 || ~14.3.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.59",
